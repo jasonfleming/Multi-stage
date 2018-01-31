@@ -1,0 +1,93 @@
+#!/bin/bash
+# 
+# This script is prepared to notify user that the simulation is finished,
+# The user can choose between getting screen notification, and emails.
+#  
+# --------------------------------------------------------------------------
+# Copyright(C) 2018 Florida Institute of Technology
+# Copyright(C) 2018 Peyman Taeb & Robert J Weaver
+#
+# This program is prepared as a part of the Multi-stage tool.
+# The Multi-stage tool is an open-source software providing the copyright
+# holders the rights to run, study, change, and distribute the software under
+# the terms and conditions of the third version of the GNU General Public
+# License (GPLv3) as published in 2007.
+#
+# Although careful considerations are given to the development of the
+# Multi-stage tool with the aim of usefulness and helpfulness, we do not
+# make any warranty express or implied, do not assume any responsibility for
+# the accuracy, completeness, or usefulness of any components and outcomes.
+#
+# The terms and conditions of the GPL are available to anybody receiving a
+# copy of the Multi-stage tool. It can be also found in
+# <http://www.gnu.org/licenses/gpl.html>. 
+# --------------------------------------------------------------------------
+#
+ID=$1
+notify_list=$2
+PHASE=$3
+EMAILNOTIFY=$4
+RUNDIR=$5
+WAVES=$6
+platform=$7
+SCRDIR=$8
+TYPE=$9
+SYSLOG=${10}
+estuary=${11} 
+#
+logMessage()
+{ DATETIME=`date +'%Y-%h-%d-T%H:%M:%S'`
+  MSG="[${DATETIME}] INFO: $@"
+  echo ${MSG} >> ${SYSLOG}
+}
+#
+# simply return if we are not supposed to send out emails
+if [[ $EMAILNOTIFY != yes && $EMAILNOTIFY != YES ]]; then
+   exit
+fi
+#
+# simply return if there are no email addresses to send email to
+if [[ $notify_list = null ]]; then
+   exit
+fi
+#
+size=`du -sm ${SCRDIR}/${ID} | cut -c 1`
+model="ADCIRC"
+if [[ $WAVES == on ]]; then
+   model="ADCIRC + SWAN"
+fi
+COMMA_SEP_LIST=${notify_list// /,}
+case $PHASE in
+#
+# ---------------- Simple notification ----------------
+#
+"simpleNot")
+#
+cat <<END > ${RUNDIR}/notify.txt
+ 
+ "The simulation with the ID $ID has been completed"
+ ----------------------------------------------------------------------------------------
+ The model system : ${model}
+ Coastal estuary :  ${estuary}
+ End date and time : `date +'%Y-%h-%d   %H:%M:%S'`
+ Platform :  $platform
+ Path to results : $RUNDIR
+ Run directory size : $size MB
+ Wallclock time : %DAYS% days, %HOURS% hrs, %MIN% min
+ ----------------------------------------------------------------------------------------
+ 
+END
+#
+if [[ -z ${TYPE} ]]; then
+   logMessage "The type of notification, email or screen, has not been specified"
+elif [[ ${TYPE} == email ]]; then
+   cat ${RUNDIR}/notify.txt | mail -s "The simulation with the ID $ID has been completed" "$COMMA_SEP_LIST" 2>> ${SYSLOG} 2>&1
+elif [[ ${TYPE} == screen ]]; then 
+   echo ""
+   cat ${RUNDIR}/notify.txt
+   echo ""
+else
+   logMessage "The type of notification, email or screen, has not been correctly specified"
+fi
+;;
+esac
