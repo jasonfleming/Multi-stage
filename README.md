@@ -1,5 +1,8 @@
-# MultiStage.v1
+# MultiStage.v1.1
 ## (Adjusted one-way nesting technique for coastal estuarine modeling in the ADCIRC model)
+<p align="center">
+  <img src="Multi-stage/graphic.jpg">
+</p>
 MultiStage tool is compiled from developed and existing software components for automating nesting technique in the ADvanced CIRCulation (ADCIRC) model system for high-resolution coastal estuarine modeling applications. The tool is developed with the aim of reducing expensive computational cost associated with high-resolution modeling using the ADCIR model. The application of the MultiStage may be found more beneficial when the ADCIRC model is coupled to wave models such as Simulating WAves Nearshore (SWAN) model, or/and domain spin-up run is required for more than couple of days.
 The current version supports conventional one-way nesting technique adjusted to the ADCIRC modeling steps requirements. A coarse-resolution outer model as the parent mesh communicates to a fine-resolution inner model as the child mesh through the specification of the open boundaries of the fine-resolution grid. 
 First, the coarse-resolution grid simulation is run (stage one) to provide the boundary conditions at the open boundaries of the limited region in terms of elevation boundary condition, or/and normal flux boundary condition (not supported yet). Next, the fine-resolution inner (nested) grid (stage two) is run forced by boundary conditions (and meteorological forcing).
