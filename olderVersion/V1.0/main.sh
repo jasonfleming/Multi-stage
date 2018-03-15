@@ -1,7 +1,5 @@
 #!/bin/bash
 # version 1: ./bcGen.x reads fort.63 to extract BCs.
-#
-# version 2: ./bcGen.61.x reads fort.61 to extract BCs.
 # --------------------------------------------------------------------
 #
 # This script is the core program of the Multi-stage tool.
@@ -390,8 +388,7 @@ if [ "$MET" == "gridded" ]; then
    nws='12'
    . $CONFIG 
    #
-   cp $BNDIR/archive.boundary.nodes/$BNNAME  $RUNDIR/boundaryNodes
-   CONTROLOPTIONS=" --stormDir $stormDir --scriptdir $SCRDIR --cst $CSDATE --endtime $HINDCASTLENGTH --dt $dt --hsformat $HOTSTARTFORMAT --controltemplate $s1_INPDIR$CONTROLTEMPLATE --fort61freq "$BCFREQ" --name $ENSTORM --met $MET --nws $nws --windInterval $windInterval --nwset $nwset --boundaryNodes boundaryNodes"
+   CONTROLOPTIONS=" --stormDir $stormDir --scriptdir $SCRDIR --cst $CSDATE --endtime $HINDCASTLENGTH --dt $dt --hsformat $HOTSTARTFORMAT --controltemplate $s1_INPDIR$CONTROLTEMPLATE --fort63freq "$BCFREQ" --name $ENSTORM --met $MET --nws $nws --windInterval $windInterval --nwset $nwset"
    CONTROLOPTIONS="$CONTROLOPTIONS --bctype $BCTYPE --eventdate $EVENTDATE --stage2_spinUp $S2SPINUP --hotswan $hotswan"
    CONTROLOPTIONS="$CONTROLOPTIONS --gridname $GRIDNAME" # for run.properties
    # writing fort.15 and fort.22
@@ -427,8 +424,7 @@ if [ "$MET" == "NHC" ]; then
    nws='0'
    . ${CONFIG}
    #
-   cp $BNDIR/archive.boundary.nodes/$BNNAME  $RUNDIR/boundaryNodes
-   CONTROLOPTIONS=" --stormDir $stormDir --scriptdir $SCRDIR --cst $CSDATE --endtime $HINDCASTLENGTH --dt $dt --hsformat $HOTSTARTFORMAT --controltemplate $s1_INPDIR$CONTROLTEMPLATE --fort61freq "$BCFREQ" --name $ENSTORM --met $MET --nws $nws --boundaryNodes boundaryNodes"
+   CONTROLOPTIONS=" --stormDir $stormDir --scriptdir $SCRDIR --cst $CSDATE --endtime $HINDCASTLENGTH --dt $dt --hsformat $HOTSTARTFORMAT --controltemplate $s1_INPDIR$CONTROLTEMPLATE --fort63freq "$BCFREQ" --name $ENSTORM --met $MET --nws $nws"
    CONTROLOPTIONS="$CONTROLOPTIONS --bctype $BCTYPE --eventdate $EVENTDATE --stage2_spinUp $S2SPINUP"
    CONTROLOPTIONS="$CONTROLOPTIONS --gridname $GRIDNAME" # for run.properties
    # writing fort.15 and fort.22
@@ -484,8 +480,7 @@ if [ "$MET" == "NHC" ]; then
    cd ${SCRDIR}
    . ${CONFIG}
    #
-   cp $BNDIR/archive.boundary.nodes/$BNNAME  $RUNDIR/boundaryNodes
-   CONTROLOPTIONS=" --stormDir $stormDir --scriptdir $SCRDIR --cst $CSDATE --endtime $HINDCASTLENGTH --dt $dt --hsformat $HOTSTARTFORMAT --controltemplate $s1_INPDIR$CONTROLTEMPLATE --fort61freq "$BCFREQ" --name $ENSTORM --met $MET --nws $nws --metfile $metfile --boundaryNodes boundaryNodes"
+   CONTROLOPTIONS=" --stormDir $stormDir --scriptdir $SCRDIR --cst $CSDATE --endtime $HINDCASTLENGTH --dt $dt --hsformat $HOTSTARTFORMAT --controltemplate $s1_INPDIR$CONTROLTEMPLATE --fort63freq "$BCFREQ" --name $ENSTORM --met $MET --nws $nws --metfile $metfile"
    CONTROLOPTIONS="$CONTROLOPTIONS --bctype $BCTYPE --eventdate $EVENTDATE --stage2_spinUp $S2SPINUP --hstime $hstime "
    CONTROLOPTIONS="$CONTROLOPTIONS --gridname $GRIDNAME" # for run.properties
    # writing fort.15 and fort.22
@@ -519,8 +514,8 @@ prepBC()
   dir=$3
   cd $dir   
   ln -fs $BNDIR/archive.boundary.nodes/$BNNAME  Boundary_Node
-  ln -fs $BNDIR/bcGen.61.x  bcGen.61.x
-  ./bcGen.61.x $Tstep $Elev
+  ln -fs $BNDIR/bcGen.x  bcGen.x
+  ./bcGen.x $Tstep $Elev
   cd -
 }
 # -----------------------------------------------------------------------------------
@@ -530,13 +525,13 @@ prepBC()
 # The following conditions are required for NHC type only
 if [[ $MET == NHC || $S2SPINUP -gt 0 ]]; then
    logMessage "Boundary condition to force HRLA tide only is being created"
-   prepBC $BCFREQ fort.61 $RUNDIR_NHC1
+   prepBC $BCFREQ fort.63 $RUNDIR_NHC1
    mv $RUNDIR_NHC1/fort.19 $RUNDIR_NHC1/fort.19_1  # tide only
 fi
 # 
 # For gridded and NHC tide and met.  
 logMessage "Boundary condition to force HRLA tide and met is being created"
-prepBC $BCFREQ fort.61 $RUNDIR
+prepBC $BCFREQ fort.63 $RUNDIR
 mv $RUNDIR/fort.19 $RUNDIR/fort.19_2              # tide and met 
 #
 # ---------------------------------------------------------------------------------
@@ -659,7 +654,7 @@ if [ "$MET" == "NHC" ]; then
       cd $SCRDIR
       . $CONFIG
       #
-      CONTROLOPTIONS=" --stormDir $stormDir --scriptdir $SCRDIR --cst $CSDATE --endtime $HINDCASTLENGTH --dt $dt --hsformat $HOTSTARTFORMAT --controltemplate $s2_INPDIR$CONTROLTEMPLATE --name $ENSTORM --met $MET --nws $nws $OUTPUTOPTIONS"
+      CONTROLOPTIONS=" --stormDir $stormDir --scriptdir $SCRDIR --cst $CSDATE --endtime $HINDCASTLENGTH --dt $dt --hsformat $HOTSTARTFORMAT --controltemplate $s2_INPDIR$CONTROLTEMPLATE --fort63freq "$BCFREQ" --name $ENSTORM --met $MET --nws $nws"
       CONTROLOPTIONS="$CONTROLOPTIONS --bctype $BCTYPE --eventdate $EVENTDATE --stage2_spinUp $S2SPINUP"
       CONTROLOPTIONS="$CONTROLOPTIONS --gridname $GRIDNAME" # for run.properties
       # writing fort.15 and fort.22

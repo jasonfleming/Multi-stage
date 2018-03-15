@@ -3,14 +3,10 @@
 # version 1: Parent mesh simulation writes global surface elevation (63).
 # It is used by bcGen.x for extracting BCs
 # bcGen.x creates BC by reading external Boundary_Node file. This file
-# contains node numbers of the parent mesh at locations of the open boundaries 
+# contains node numbers of the parent mesh at locations of the open boundaries
 # of the child mesh. bcGen.x reads fort.63 to extract BCs at the locations
 # specified by Boundary_Node file.
-#
-# version 2: Parent mesh simulation (stage one) writes Boundary_Node file 
-# containing Lats/Lons of extracting nodes into fort.15. Fort.61 is creates 
-# and is used by bcGen.61.x to create BCs.
-#----------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------
 # control_file_gen.pl
 # ASGS program modified for use in the Multi-stage tool,
 # 
@@ -111,7 +107,6 @@ my $fricType;          # SWAN BOTTOM FRICTION TYPE
 my $platform;
 my ($line_1,$line_2,$line_3,$line_4,$line_5,$line_6,$line_7,$line_8,$line_9,$line_10);
 my $nwset;             # Basin (and regional) met nws=12
-my $boundaryNodes;
 #
 GetOptions("controltemplate=s" => \$controltemplate,
            "stormdir=s" => \$stormDir,
@@ -155,8 +150,7 @@ GetOptions("controltemplate=s" => \$controltemplate,
            "nddlAttribute=s" => \$nddlAttribute,
            "swanBottomFri=s" => \$fricType,
            "platform=s" => \$platform,
-           "nwset=s" => \$nwset,
-           "boundaryNodes=s" => \$boundaryNodes,
+           "nwset=s" => \$nwset
            );
 #
 # parse out the pieces of the cold start date
@@ -374,25 +368,24 @@ if ( $enstorm eq "S1_1_NHC") {
 #
 my $fort61specifier = &getSpecifier($fort61freq,$fort61netcdf);
 my $fort62specifier = &getSpecifier($fort62freq,$fort62netcdf);
+$fort61 = $fort61specifier . " 0.0 365.0 " . &getIncrement($fort61freq,$dt);
+$fort62 = $fort62specifier . " 0.0 365.0 " . &getIncrement($fort62freq,$dt);
+#
 my $fort63specifier = &getSpecifier($fort63freq,$fort63netcdf);
-my $fort64specifier = &getSpecifier($fort64freq,$fort64netcdf); 
+my $fort64specifier = &getSpecifier($fort64freq,$fort64netcdf);
 #
 # 
 # ********* Stage two accepts every type of output specification
 #
-if ( $enstorm eq "S2.gridded" || ( $enstorm eq "S1_1_NHC" && $S2SPINUP le 0 ) || ( $enstorm eq "S2_1_NHC" && $S2SPINUP le 0 ) || $enstorm eq "S2_2_NHC" ) {
-   $fort61 = $fort61specifier . " 0.0 365.0 " . &getIncrement($fort61freq,$dt);
-   $fort62 = $fort62specifier . " 0.0 365.0 " . &getIncrement($fort62freq,$dt);
+if ( $enstorm eq "S2.gridded" || ( $enstorm eq "S1_1_NHC" && $S2SPINUP lt 0 ) || ( $enstorm eq "S2_1_NHC" && $S2SPINUP lt 0 ) || $enstorm eq "S2_2_NHC" ) {
    $fort63 = $fort63specifier . " 0.0 365.0 " . &getIncrement($fort63freq,$dt);
    $fort64 = $fort64specifier . " 0.0 365.0 " . &getIncrement($fort64freq,$dt);
 }
 #
 # ******** Stage one only requires fort.63 or fort.64 output
 #
-if ( ( $enstorm eq "S1_1_NHC" && $S2SPINUP gt 0 ) ) {
+if ( ( $enstorm eq "S1_1_NHC" && $S2SPINUP ge 0 ) || ( $enstorm eq "S2_1_NHC" && $S2SPINUP ge 0 )) {
    if ( $bctype eq "elevation" ) {
-   $fort61 = $fort61specifier . " " .  $start_output_day . " " . $endtime . " " .  &getIncrement($fort61freq,$dt);
-   $fort62 = $fort62specifier . " 0.0 365.0 " . &getIncrement($fort62freq,$dt);
    $fort63 = $fort63specifier . " " .  $start_output_day . " " . $endtime . " " .  &getIncrement($fort63freq,$dt);
    $fort64 = $fort64specifier . " 0.0 365.0 " . &getIncrement($fort64freq,$dt); 
    #
@@ -403,17 +396,8 @@ if ( ( $enstorm eq "S1_1_NHC" && $S2SPINUP gt 0 ) ) {
    }
 }
 #
-if ((  $enstorm eq "S2_1_NHC" && $S2SPINUP gt 0 )) {
-   $fort61 = $fort61specifier . " 0.0 365.0 " . &getIncrement($fort61freq,$dt);
-   $fort62 = $fort62specifier . " 0.0 365.0 " . &getIncrement($fort62freq,$dt);
-   $fort63 = $fort63specifier . " 0.0 365.0 " . &getIncrement($fort63freq,$dt);
-   $fort64 = $fort64specifier . " 0.0 365.0 " . &getIncrement($fort64freq,$dt);
-}
-#
 if ( $enstorm eq "S1.gridded" || $enstorm eq "S1_2_NHC" ) { 
    if ( $bctype eq "elevation" ) {
-   $fort61 = $fort61specifier . " " .  $start_output_day . " " . $endtime . " " .  &getIncrement($fort61freq,$dt);
-   $fort62 = $fort62specifier . " 0.0 365.0 " . &getIncrement($fort62freq,$dt);
    $fort63 = $fort63specifier . " " .  $start_output_day . " " . $endtime . " " .  &getIncrement($fort63freq,$dt);
    $fort64 = $fort64specifier . " 0.0 365.0 " . &getIncrement($fort64freq,$dt);
    #
@@ -432,7 +416,7 @@ $fort7374 = $fort7374specifier . " 0.0 365.0 " . &getIncrement($fort7374freq,$dt
 if ( $nws eq "0" || $enstorm eq "S1_1_NHC" ) {
    $fort7172 = "NO LINE HERE";
    $fort7374 = "NO LINE HERE";
-}
+} 
 # ----------------------------------------------------------------------------
 # add swan time step to WTIMINC line if waves have been activated
 if ( $waves eq "on" ) {
@@ -501,10 +485,6 @@ if ( -e "$scriptdir/tides/tide_fac.x" && -x "$scriptdir/tides/tide_fac.x" ) {
 # load up stations
 $numelevstations = &getStations($elevstations,"elevation");
 $numvelstations = &getStations($velstations,"velocity");
-if (( $enstorm eq "S1_1_NHC" && $S2SPINUP ge 0 ) || ( $enstorm eq "S1.gridded" ) || ( $enstorm eq "S1_2_NHC" )) {
-   $numelevstations = &getStations($boundaryNodes,"elevation");
-}
-#
 if ( $nws eq "0" ) {
    stderrMessage("INFO","NWS is zero; meteorological stations will not be written to the fort.15 file.");
    $nummetstations = "NO LINE HERE";
