@@ -1,7 +1,4 @@
 #!/bin/bash
-# version 1: ./bcGen.x reads fort.63 to extract BCs.
-#
-# version 2: ./bcGen.61.x reads fort.61 to extract BCs.
 # --------------------------------------------------------------------
 #
 # This script is the core program of the Multi-stage tool.
@@ -530,14 +527,20 @@ prepBC()
 # The following conditions are required for NHC type only
 if [[ $MET == NHC || $S2SPINUP -gt 0 ]]; then
    logMessage "Boundary condition to force HRLA tide only is being created"
+   mv $RUNDIR_NHC1/fort.14 $RUNDIR_NHC1/fort.14_parent
+   ln -s ${s2_INPDIR}/${s2_grd}         $RUNDIR_NHC1/fort.14
    prepBC $BCFREQ fort.61 $RUNDIR_NHC1
    mv $RUNDIR_NHC1/fort.19 $RUNDIR_NHC1/fort.19_1  # tide only
+   mv $RUNDIR_NHC1/fort.14 $RUNDIR_NHC1/fort.14_child
 fi
 # 
 # For gridded and NHC tide and met.  
 logMessage "Boundary condition to force HRLA tide and met is being created"
+mv $RUNDIR/fort.14 $RUNDIR/fort.14_parent
+ln -s ${s2_INPDIR}/${s2_grd}         $RUNDIR/fort.14
 prepBC $BCFREQ fort.61 $RUNDIR
 mv $RUNDIR/fort.19 $RUNDIR/fort.19_2              # tide and met 
+mv $RUNDIR/fort.14 $RUNDIR/fort.14_child
 #
 # ---------------------------------------------------------------------------------
 # 
