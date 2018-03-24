@@ -740,10 +740,15 @@ nddlAttribute="off"
       # the beginning of the stage 2 simulation that is $S2SPINUP days after
       # the start date of the fort.22
       if [ "$S2SPINUP" -lt 0 ]; then
+         # Removing first $S2SPINUP day(s) from the original fort.22
 	 shorter22start=`cat ${SYSLOG} | grep "Stage two start date is" | cut -d\' -f2 | grep -m1 ""`
          cat $RUNDIR/fort.22 | grep --after-context=2000 "$shorter22start" >> $RUNDIR/fort.22.shorter
-         mv $RUNDIR/fort.22 $RUNDIR/fort.22.old
-         ln -fs $RUNDIR/fort.22.shorter $RUNDIR/fort.22
+         mv $RUNDIR/fort.22 $RUNDIR/fort.22.orig
+         # Editing the time of the forecast/nowcast for each track location (each line) in hours from the start of the simulation (0,6,12,18,etc). 
+         ln -fs $SCRDIR/wind/edit22.x $RUNDIR/edit22.x
+         cd $RUNDIR
+         ./edit22.x $S2SPINUP
+         cd -
       fi
       # Decomposing grid, control, and nodal attribute file
       logMessage "Redirecting to HRLA directory (S2:NHC & Met)"
