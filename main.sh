@@ -89,14 +89,14 @@ CRRNTDIR=$(pwd)
  logMessage "Creating run directories under ${SCRDIR}/${ID}" 
  mkdir $ID
  mkdir $ID/S1
- mkdir $ID/S1/TideMetSpinUp
+ mkdir $ID/S1/TideMet
  mkdir $ID/S2/
  if [ "$MET" == "NHC" ]; then
       mkdir $ID/S1/TideSpinUp
       mkdir $ID/S2/TideSpinUp
-      mkdir $ID/S2/TideMetSpinUp
+      mkdir $ID/S2/TideMet
  else 
-      mkdir $ID/S2/TideMetSpinUp
+      mkdir $ID/S2/TideMet
  fi
  . $CONFIG
 #
@@ -358,7 +358,7 @@ checkCPUExistence $NCPU $outputWriter
 echo ""  >> ${SYSLOG} 2>&1
 logMessage "Stage 1 -- gridded meteorology"
 if [ "$MET" == "gridded" ]; then
-   RUNDIR=${SCRDIR}${ID}/S1/TideMetSpinUp
+   RUNDIR=${SCRDIR}${ID}/S1/TideMet
    logMessage "Linking input files into $RUNDIR ."
    # Linking the stage one grid
    ln -s ${s1_INPDIR}/${s1_grd}         $RUNDIR/fort.14
@@ -451,7 +451,7 @@ if [ "$MET" == "NHC" ]; then
    echo ""  >> ${SYSLOG} 2>&1
    logMessage "Stage 1 -- Tide & met for NHC meteorology"
    RUNDIR_OLD=${RUNDIR}
-   RUNDIR=$SCRDIR/${ID}/S1/TideMetSpinUp/
+   RUNDIR=$SCRDIR/${ID}/S1/TideMet/
    # saving RUNDIR if HRLA only tide spin-up required
    RUNDIR_NHC2=$RUNDIR
    # Linking hotstart file from tide only run
@@ -557,7 +557,7 @@ nddlAttribute="off"
 if [ "$MET" == "gridded" ]; then
    echo ""  >> ${SYSLOG} 2>&1
    logMessage "Stage 2 -- gridded meteorology"
-   RUNDIR=$SCRDIR/${ID}/S2/TideMetSpinUp 
+   RUNDIR=$SCRDIR/${ID}/S2/TideMet 
    # Linking fort.19 to run directory for HRLA
    if [ ! -z $RUNDIR_OLD/fort.19 ]; then
       ln -s $RUNDIR_OLD/fort.19_2    $RUNDIR/fort.19
@@ -690,8 +690,8 @@ nddlAttribute="off"
       echo ""  >> ${SYSLOG} 2>&1
       logMessage "Stage 2 -- Tide & met for NHC meteorology"
       RUNDIR_OLD=$RUNDIR
-      RUNDIR=$SCRDIR/${ID}/S2/TideMetSpinUp/
-      ln -s $SCRDIR/${ID}/S1/TideMetSpinUp/fort.19_2    $RUNDIR/fort.19
+      RUNDIR=$SCRDIR/${ID}/S2/TideMet/
+      ln -s $SCRDIR/${ID}/S1/TideMet/fort.19_2    $RUNDIR/fort.19
       if [ "$S2SPINUP" -gt 0 ]; then
          # Linking hotstart file from BC tide only run 
          ln -s  $RUNDIR_OLD/PE0000/fort.67 $RUNDIR/fort.67
