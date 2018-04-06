@@ -457,9 +457,14 @@ if [ "$MET" == "NHC" ]; then
    # Linking hotstart file from tide only run
    ln -s  $RUNDIR_OLD/PE0000/fort.67 $RUNDIR/fort.67
    # Copying tide only fort.63 to append if HRLA needs to be spun up
-   if [ $S2SPINUP -gt 0 ]; then
+   # To check if S2SPINUP is possitive or negative
+   # if [ $S2SPINUP -gt 0 ]; then DOESN'T work if S2SPINUP is not integer
+   # Update: bash does not have flowting point arithmetic
+   ctr=`echo $S2SPINUP | cut -b 1`    # To check if S2SPINUP is possitive or negative 
+   if [ $ctr != "-" ]; then
       cp  $RUNDIR_OLD/fort.63 $RUNDIR/fort.63
    fi
+   # -----------------------------------------------
    logMessage "Linking input files into $RUNDIR ."
    # Linking the stage one grid
    ln -s ${s1_INPDIR}/${s1_grd}         $RUNDIR/fort.14
@@ -525,7 +530,8 @@ prepBC()
 # Creating boundary forcing file
 #
 # The following conditions are required for NHC type only
-if [[ $MET == NHC || $S2SPINUP -gt 0 ]]; then
+ctr=`echo $S2SPINUP | cut -b 1`    # To check if S2SPINUP is possitive or negative
+if [[ $MET == NHC || $ctr != "-" ]]; then
    logMessage "Boundary condition to force HRLA tide only is being created"
    mv $RUNDIR_NHC1/fort.14 $RUNDIR_NHC1/fort.14_parent
    ln -s ${s2_INPDIR}/${s2_grd}         $RUNDIR_NHC1/fort.14
@@ -634,7 +640,7 @@ RUNDIR_OLD=$RUNDIR
 # turning off the nodal attribute
 # Redirecting to HRLA directory: S2
 if [ "$MET" == "NHC" ]; then
-   if [ $S2SPINUP -gt 0 ]; then
+   if [ $ctr != "-" ]; then
       echo ""  >> ${SYSLOG} 2>&1
       logMessage "Stage 2 -- Tide only for NHC meteorology"
       RUNDIR=$SCRDIR/${ID}/S2/TideSpinUp
@@ -692,7 +698,8 @@ nddlAttribute="off"
       RUNDIR_OLD=$RUNDIR
       RUNDIR=$SCRDIR/${ID}/S2/TideMet/
       ln -s $SCRDIR/${ID}/S1/TideMet/fort.19_2    $RUNDIR/fort.19
-      if [ "$S2SPINUP" -gt 0 ]; then
+      ctr=`echo $S2SPINUP | cut -b 1`    # To check if S2SPINUP is possitive or negative
+      if [ $ctr != "-" ]; then
          # Linking hotstart file from BC tide only run 
          ln -s  $RUNDIR_OLD/PE0000/fort.67 $RUNDIR/fort.67
       fi
@@ -713,7 +720,7 @@ nddlAttribute="off"
       nws='20'
       metfile=${met_INPDIR}/${NHCmet}
       #
-      if [ "$S2SPINUP" -le 0 ]; then
+      if [ $ctr == "-" ]; then
          hstime="off"
       else
          hstime="on"
@@ -739,9 +746,10 @@ nddlAttribute="off"
       # if the HRLA spinup is negative, we need to create a fort.22 starting at 
       # the beginning of the stage 2 simulation that is $S2SPINUP days after
       # the start date of the fort.22
-      if [ "$S2SPINUP" -lt 0 ]; then
+      ctr=`echo $S2SPINUP | cut -b 1`    # To check if S2SPINUP is possitive or negative
+      if [ $ctr == "-" ]; then
          # Removing first $S2SPINUP day(s) from the original fort.22
-	 shorter22start=`cat ${SYSLOG} | grep "Stage two start date is" | cut -d\' -f2 | grep -m1 ""`
+	 shorter22start=`cat ${SYSLOG} | grep "Stage two tide and met. start date is" | cut -d\' -f2 | grep -m1 ""`
          cat $RUNDIR/fort.22 | grep --after-context=2000 "$shorter22start" >> $RUNDIR/fort.22.shorter
          mv $RUNDIR/fort.22 $RUNDIR/fort.22.orig
          # Editing the time of the forecast/nowcast for each track location (each line) in hours from the start of the simulation (0,6,12,18,etc). 
