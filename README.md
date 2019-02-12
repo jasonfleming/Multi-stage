@@ -1,16 +1,15 @@
-# MultiStage.v1.1
+# Seven-member ensemble high-resolution estuarine forecast system known as Ensemble-Multistage
 ## (Adjusted one-way nesting technique for coastal estuarine modeling in the ADCIRC model)
 
 <p align="center">
   <img src="https://github.com/ptaeb2014/Multi-stage/blob/master/graphic.jpg">
 </p>
 
-MultiStage tool is compiled from developed and existing software components for automating nesting technique in the ADvanced CIRCulation (ADCIRC) model system for high-resolution coastal estuarine modeling applications. The tool is developed with the aim of reducing expensive computational cost associated with high-resolution modeling using the ADCIR model. The application of the MultiStage may be found more beneficial when the ADCIRC model is coupled to wave models such as Simulating WAves Nearshore (SWAN) model, or/and domain spin-up run is required for more than couple of days.
+MultiStage tool is compiled from developed and existing software components for automating nesting technique in the ADvanced CIRCulation (ADCIRC) model system for high-resolution coastal estuarine modeling applications. The tool is developed with the aim of reducing expensive computational cost associated with high-resolution modeling using the ADCIR model, and improving the forecast skill by performing ensemble approach and providing probabilistic solutions.
 
-The current version supports conventional one-way nesting technique adjusted to the ADCIRC modeling steps requirements. A coarse-resolution outer model as the parent mesh communicates to a fine-resolution inner model as the child mesh through the specification of the open boundaries of the fine-resolution grid. 
+The current version supports conventional one-way nesting technique applied in the ADCIRC model. A large-scale coarse-resolution model communicates to a fine-scale high-resolution model through the specification of the open boundaries of the fine-resolution mesh. Nearshore predictions are made by the large-scale coarse and estuarine predictions are made by the fine-scale high-reosluion mesh runs.
 
-First, the coarse-resolution grid simulation is run (stage one) to provide the boundary conditions at the open boundaries of the limited region in terms of elevation boundary condition, or/and normal flux boundary condition (not supported yet). Next, the fine-resolution inner (nested) grid (stage two) is run forced by boundary conditions (and meteorological forcing).
-MultiStage outer model is based on ec95 grid with adjusted locations, depths, and resolutions at the open inlets of the major estuaries along the east coast and the Gulf of Mexico. The adjusted ec95 has open Ocean boundary located at longitude 60.041 west expanded to the east coast of the US, the Gulf of Mexico, and the Caribbean Sea. The tool has a comprehensive database of fine-resolution inner grid for most major coastal estuaries along the east coast of the US and the Gulf of Mexico.
+The core model, the ADCIRC+SWAN model, is forced by seven wind forcing per cycle. Wind forcings include deterministic North American Meso-scale Model (NAM), ensemble mean, ensemble mean + 1 standard deviation, and ensemble mean - 1 standard deviation of Short Range Regional Ensemble Forecast (SREF) and ensemble mean, ensemble mean + 1 standard deviation, and ensemble mean - 1 standard deviation of Global Ensemble Forecast System (GEFS).
 
 In the development of the Multi-stage tool, I take advantage of the existing software infrastructures and methods in the ADCIRC Surge Guidance System (ASGS) (https://github.com/jasonfleming/asgs).
 
