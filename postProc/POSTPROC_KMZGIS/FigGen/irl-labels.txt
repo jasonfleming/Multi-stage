@@ -1,0 +1,13 @@
+10
+Ponce Inlet,-80.905002,29.077376,LM,15,Black
+Titusville,-80.8,28.622,RM,15,Black
+Sebastian,-80.47,27.83,RM,15,Black
+Cocoa,-80.752271,28.391526,RM,15,Black
+Port Canaveral,-80.589173,28.409058,LM,15,Black
+Kennedy Space Center,-80.649007,28.573319,LM,15,Black
+Melbourne,-80.607949,28.079307,RM,15,Black
+Fort Pierce,-80.341576,27.468019,RM,15,Black
+St. Lucie,-80.232510,27.208100,RM,15,Black
+Jupiter,-80.114584,26.950067,RM,15,Black
+Lake Okeechobee,-80.981091,26.985576,LM,15,Black
+

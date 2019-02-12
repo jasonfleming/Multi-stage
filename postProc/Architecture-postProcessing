@@ -1,0 +1,64 @@
+
+ SUMMARY:
+                  Task/funciton				                    driver                             called by             when implemented
+    -----------------------------------------------------------     ----------------------------            ------------------   ----------------------------
+ 1) Transposing station files and creating 2D contours          by  /postProc/visualize_post.sh,  Called by  F_s1/2_gridded.sh    after each member run ends.
+ 2) Validating plots and notifying users of ensemble completion by  /src/postProc.sh,             Called by  F_s2_griddedsh       after all member runs end.
+
+
+ DETAILS:
+
+ F_s2_gridded.sh <upon the completion of each member>
+ |
+ |=> main/postProc/visualize_post.sh |
+                                     | => call main/postProc/station_transpose.pl
+                                          (1) Transpose fort.61
+                                          (2) Transpose fort.72
+                                          (3) Transpose swan.61 
+                                              Created by F_s1_gridded.sh from main/postProc/latLong.pull.n3.x 
+                                                        Note: latLong.pull.n3.x grabbed from asgs. 
+                                                        Modified to read station file, grid, and global file as arguements 
+                                          (4) Call main/postProc/autoplot.pl to create template.gp 
+                                                        Note: Most templates that are used currently are prepared and customized
+                                                              for specific locations. (See below).
+                                                              This autoplot.pl is not used for now.
+                                          call main/postProc/POSTPROC_KMZGIS/vslztn_contour.sh to create FigureGen plots.
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+ Validation plots
+   |
+   |=> (1) S1 & S2 of all members complete
+                                         |
+                                         |=> F_s2_gridded.sh <last memeber> calls /src/postProc.sh
+                                                                                        |
+                                --------------------------------------------------------|-------------
+                               |                                                                      |
+                main Dir/postProc/validation-s1/genValidationPlots-s1.sh                              |main Dir/postProc/validation-s2/genValidationPlots-s2.sh
+               |                                                                                      |
+               |                                                                                      |
+                Create sub dir "validation-s1" in cycle dir                                           Create sub dir "validation-s1" in cycle dir
+                Link all fort.61_transposed.txt                                                       Link all fort.61_transposed.txt
+                paste all together                                                                    paste all together
+               |                                                                                      |
+               |                                                                                      |
+             (1) download Trident Pier WL data|                                                      (2) download Wabasso & Haulover canal |
+                                              |=> Call mainDir/postProc/validation-s1/                                                     |=> Call mainDir/postProc/validation-s2/
+                                                           ... noaa-WL-download.sh                                                                 ... usgs-WL-download.sh
+                 Process data|                                                                                                                 Process data
+                             |=> call mainDir/postProc/validation-s1/usgs_wl_process.x                                                         Copy and prepare gnuplot template file
+                 Copy and prepare gnuplot template file                                                                                        plot
+                 plot                                                                                
+             (2) Extract the last two days of CPRG data being downloaded 
+                 continuously by "cprg-wl-download.sh" in mainDir/postProc/
+                                                        ... CPRG_Lab/cprg-WL-download.sh
+                 Process data
+                 Copy and prepare gnuplot template file 
+                 plot 
+
+
+                                                                   |
+                                                                   |
+                                                                   |-Attach and send all plots.
+                                                                   |
+                                                                   |
+                                                                   |-Send notifications and emails.

@@ -1,0 +1,7397 @@
+%!PS-Adobe-2.0
+%%Title: EW_cprg.ps
+%%Creator: gnuplot 4.6 patchlevel 2
+%%CreationDate: Wed Nov  7 10:54:08 2018
+%%DocumentFonts: (atend)
+%%BoundingBox: 50 50 554 770
+%%Orientation: Landscape
+%%Pages: (atend)
+%%EndComments
+%%BeginProlog
+/gnudict 256 dict def
+gnudict begin
+%
+% The following true/false flags may be edited by hand if desired.
+% The unit line width and grayscale image gamma correction may also be changed.
+%
+/Color false def
+/Blacktext false def
+/Solid false def
+/Dashlength 1 def
+/Landscape true def
+/Level1 false def
+/Rounded false def
+/ClipToBoundingBox false def
+/SuppressPDFMark false def
+/TransparentPatterns false def
+/gnulinewidth 5.000 def
+/userlinewidth gnulinewidth def
+/Gamma 1.0 def
+/BackgroundColor {-1.000 -1.000 -1.000} def
+%
+/vshift -50 def
+/dl1 {
+  10.0 Dashlength mul mul
+  Rounded { currentlinewidth 0.75 mul sub dup 0 le { pop 0.01 } if } if
+} def
+/dl2 {
+  10.0 Dashlength mul mul
+  Rounded { currentlinewidth 0.75 mul add } if
+} def
+/hpt_ 31.5 def
+/vpt_ 31.5 def
+/hpt hpt_ def
+/vpt vpt_ def
+/doclip {
+  ClipToBoundingBox {
+    newpath 50 50 moveto 554 50 lineto 554 770 lineto 50 770 lineto closepath
+    clip
+  } if
+} def
+%
+% Gnuplot Prolog Version 4.6 (September 2012)
+%
+%/SuppressPDFMark true def
+%
+/M {moveto} bind def
+/L {lineto} bind def
+/R {rmoveto} bind def
+/V {rlineto} bind def
+/N {newpath moveto} bind def
+/Z {closepath} bind def
+/C {setrgbcolor} bind def
+/f {rlineto fill} bind def
+/g {setgray} bind def
+/Gshow {show} def   % May be redefined later in the file to support UTF-8
+/vpt2 vpt 2 mul def
+/hpt2 hpt 2 mul def
+/Lshow {currentpoint stroke M 0 vshift R 
+	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+/Rshow {currentpoint stroke M dup stringwidth pop neg vshift R
+	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+/Cshow {currentpoint stroke M dup stringwidth pop -2 div vshift R 
+	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+/UP {dup vpt_ mul /vpt exch def hpt_ mul /hpt exch def
+  /hpt2 hpt 2 mul def /vpt2 vpt 2 mul def} def
+/DL {Color {setrgbcolor Solid {pop []} if 0 setdash}
+ {pop pop pop 0 setgray Solid {pop []} if 0 setdash} ifelse} def
+/BL {stroke userlinewidth 2 mul setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/AL {stroke userlinewidth 2 div setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/UL {dup gnulinewidth mul /userlinewidth exch def
+	dup 1 lt {pop 1} if 10 mul /udl exch def} def
+/PL {stroke userlinewidth setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+3.8 setmiterlimit
+% Default Line colors
+/LCw {1 1 1} def
+/LCb {0 0 0} def
+/LCa {0 0 0} def
+/LC0 {1 0 0} def
+/LC1 {0 1 0} def
+/LC2 {0 0 1} def
+/LC3 {1 0 1} def
+/LC4 {0 1 1} def
+/LC5 {1 1 0} def
+/LC6 {0 0 0} def
+/LC7 {1 0.3 0} def
+/LC8 {0.5 0.5 0.5} def
+% Default Line Types
+/LTw {PL [] 1 setgray} def
+/LTb {BL [] LCb DL} def
+/LTa {AL [1 udl mul 2 udl mul] 0 setdash LCa setrgbcolor} def
+/LT0 {PL [] LC0 DL} def
+/LT1 {PL [4 dl1 2 dl2] LC1 DL} def
+/LT2 {PL [2 dl1 3 dl2] LC2 DL} def
+/LT3 {PL [1 dl1 1.5 dl2] LC3 DL} def
+/LT4 {PL [6 dl1 2 dl2 1 dl1 2 dl2] LC4 DL} def
+/LT5 {PL [3 dl1 3 dl2 1 dl1 3 dl2] LC5 DL} def
+/LT6 {PL [2 dl1 2 dl2 2 dl1 6 dl2] LC6 DL} def
+/LT7 {PL [1 dl1 2 dl2 6 dl1 2 dl2 1 dl1 2 dl2] LC7 DL} def
+/LT8 {PL [2 dl1 2 dl2 2 dl1 2 dl2 2 dl1 2 dl2 2 dl1 4 dl2] LC8 DL} def
+/Pnt {stroke [] 0 setdash gsave 1 setlinecap M 0 0 V stroke grestore} def
+/Dia {stroke [] 0 setdash 2 copy vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke
+  Pnt} def
+/Pls {stroke [] 0 setdash vpt sub M 0 vpt2 V
+  currentpoint stroke M
+  hpt neg vpt neg R hpt2 0 V stroke
+ } def
+/Box {stroke [] 0 setdash 2 copy exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke
+  Pnt} def
+/Crs {stroke [] 0 setdash exch hpt sub exch vpt add M
+  hpt2 vpt2 neg V currentpoint stroke M
+  hpt2 neg 0 R hpt2 vpt2 V stroke} def
+/TriU {stroke [] 0 setdash 2 copy vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke
+  Pnt} def
+/Star {2 copy Pls Crs} def
+/BoxF {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath fill} def
+/TriUF {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath fill} def
+/TriD {stroke [] 0 setdash 2 copy vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke
+  Pnt} def
+/TriDF {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath fill} def
+/DiaF {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath fill} def
+/Pent {stroke [] 0 setdash 2 copy gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore Pnt} def
+/PentF {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath fill grestore} def
+/Circle {stroke [] 0 setdash 2 copy
+  hpt 0 360 arc stroke Pnt} def
+/CircleF {stroke [] 0 setdash hpt 0 360 arc fill} def
+/C0 {BL [] 0 setdash 2 copy moveto vpt 90 450 arc} bind def
+/C1 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C2 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C3 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C4 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C5 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc
+	2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc} bind def
+/C6 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C7 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C8 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C9 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 450 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C10 {BL [] 0 setdash 2 copy 2 copy moveto vpt 270 360 arc closepath fill
+	2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C11 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C12 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C13 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C14 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 360 arc closepath fill
+	vpt 0 360 arc} bind def
+/C15 {BL [] 0 setdash 2 copy vpt 0 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/Rec {newpath 4 2 roll moveto 1 index 0 rlineto 0 exch rlineto
+	neg 0 rlineto closepath} bind def
+/Square {dup Rec} bind def
+/Bsquare {vpt sub exch vpt sub exch vpt2 Square} bind def
+/S0 {BL [] 0 setdash 2 copy moveto 0 vpt rlineto BL Bsquare} bind def
+/S1 {BL [] 0 setdash 2 copy vpt Square fill Bsquare} bind def
+/S2 {BL [] 0 setdash 2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S3 {BL [] 0 setdash 2 copy exch vpt sub exch vpt2 vpt Rec fill Bsquare} bind def
+/S4 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S5 {BL [] 0 setdash 2 copy 2 copy vpt Square fill
+	exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S6 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S7 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S8 {BL [] 0 setdash 2 copy vpt sub vpt Square fill Bsquare} bind def
+/S9 {BL [] 0 setdash 2 copy vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S10 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt Square fill
+	Bsquare} bind def
+/S11 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt2 vpt Rec fill
+	Bsquare} bind def
+/S12 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill Bsquare} bind def
+/S13 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S14 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S15 {BL [] 0 setdash 2 copy Bsquare fill Bsquare} bind def
+/D0 {gsave translate 45 rotate 0 0 S0 stroke grestore} bind def
+/D1 {gsave translate 45 rotate 0 0 S1 stroke grestore} bind def
+/D2 {gsave translate 45 rotate 0 0 S2 stroke grestore} bind def
+/D3 {gsave translate 45 rotate 0 0 S3 stroke grestore} bind def
+/D4 {gsave translate 45 rotate 0 0 S4 stroke grestore} bind def
+/D5 {gsave translate 45 rotate 0 0 S5 stroke grestore} bind def
+/D6 {gsave translate 45 rotate 0 0 S6 stroke grestore} bind def
+/D7 {gsave translate 45 rotate 0 0 S7 stroke grestore} bind def
+/D8 {gsave translate 45 rotate 0 0 S8 stroke grestore} bind def
+/D9 {gsave translate 45 rotate 0 0 S9 stroke grestore} bind def
+/D10 {gsave translate 45 rotate 0 0 S10 stroke grestore} bind def
+/D11 {gsave translate 45 rotate 0 0 S11 stroke grestore} bind def
+/D12 {gsave translate 45 rotate 0 0 S12 stroke grestore} bind def
+/D13 {gsave translate 45 rotate 0 0 S13 stroke grestore} bind def
+/D14 {gsave translate 45 rotate 0 0 S14 stroke grestore} bind def
+/D15 {gsave translate 45 rotate 0 0 S15 stroke grestore} bind def
+/DiaE {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke} def
+/BoxE {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke} def
+/TriUE {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke} def
+/TriDE {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke} def
+/PentE {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore} def
+/CircE {stroke [] 0 setdash 
+  hpt 0 360 arc stroke} def
+/Opaque {gsave closepath 1 setgray fill grestore 0 setgray closepath} def
+/DiaW {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V Opaque stroke} def
+/BoxW {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V Opaque stroke} def
+/TriUW {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V Opaque stroke} def
+/TriDW {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V Opaque stroke} def
+/PentW {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  Opaque stroke grestore} def
+/CircW {stroke [] 0 setdash 
+  hpt 0 360 arc Opaque stroke} def
+/BoxFill {gsave Rec 1 setgray fill grestore} def
+/Density {
+  /Fillden exch def
+  currentrgbcolor
+  /ColB exch def /ColG exch def /ColR exch def
+  /ColR ColR Fillden mul Fillden sub 1 add def
+  /ColG ColG Fillden mul Fillden sub 1 add def
+  /ColB ColB Fillden mul Fillden sub 1 add def
+  ColR ColG ColB setrgbcolor} def
+/BoxColFill {gsave Rec PolyFill} def
+/PolyFill {gsave Density fill grestore grestore} def
+/h {rlineto rlineto rlineto gsave closepath fill grestore} bind def
+%
+% PostScript Level 1 Pattern Fill routine for rectangles
+% Usage: x y w h s a XX PatternFill
+%	x,y = lower left corner of box to be filled
+%	w,h = width and height of box
+%	  a = angle in degrees between lines and x-axis
+%	 XX = 0/1 for no/yes cross-hatch
+%
+/PatternFill {gsave /PFa [ 9 2 roll ] def
+  PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
+  PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+  clip
+  currentlinewidth 0.5 mul setlinewidth
+  /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
+  0 0 M PFa 5 get rotate PFs -2 div dup translate
+  0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 M 0 PFs V} for
+  0 PFa 6 get ne {
+	0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 2 1 roll M PFs 0 V} for
+ } if
+  stroke grestore} def
+%
+/languagelevel where
+ {pop languagelevel} {1} ifelse
+ 2 lt
+	{/InterpretLevel1 true def}
+	{/InterpretLevel1 Level1 def}
+ ifelse
+%
+% PostScript level 2 pattern fill definitions
+%
+/Level2PatternFill {
+/Tile8x8 {/PaintType 2 /PatternType 1 /TilingType 1 /BBox [0 0 8 8] /XStep 8 /YStep 8}
+	bind def
+/KeepColor {currentrgbcolor [/Pattern /DeviceRGB] setcolorspace} bind def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke} 
+>> matrix makepattern
+/Pat1 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke
+	0 4 M 4 8 L 8 4 L 4 0 L 0 4 L stroke}
+>> matrix makepattern
+/Pat2 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 0 8 L
+	8 8 L 8 0 L 0 0 L fill}
+>> matrix makepattern
+/Pat3 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 8 M 8 -4 L
+	0 12 M 12 0 L stroke}
+>> matrix makepattern
+/Pat4 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 0 M 8 12 L
+	0 -4 M 12 8 L stroke}
+>> matrix makepattern
+/Pat5 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 8 M 4 -4 L
+	0 12 M 8 -4 L 4 12 M 10 0 L stroke}
+>> matrix makepattern
+/Pat6 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 0 M 4 12 L
+	0 -4 M 8 12 L 4 -4 M 10 8 L stroke}
+>> matrix makepattern
+/Pat7 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 8 -2 M -4 4 L
+	12 0 M -4 8 L 12 4 M 0 10 L stroke}
+>> matrix makepattern
+/Pat8 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 -2 M 12 4 L
+	-4 0 M 12 8 L -4 4 M 8 10 L stroke}
+>> matrix makepattern
+/Pat9 exch def
+/Pattern1 {PatternBgnd KeepColor Pat1 setpattern} bind def
+/Pattern2 {PatternBgnd KeepColor Pat2 setpattern} bind def
+/Pattern3 {PatternBgnd KeepColor Pat3 setpattern} bind def
+/Pattern4 {PatternBgnd KeepColor Landscape {Pat5} {Pat4} ifelse setpattern} bind def
+/Pattern5 {PatternBgnd KeepColor Landscape {Pat4} {Pat5} ifelse setpattern} bind def
+/Pattern6 {PatternBgnd KeepColor Landscape {Pat9} {Pat6} ifelse setpattern} bind def
+/Pattern7 {PatternBgnd KeepColor Landscape {Pat8} {Pat7} ifelse setpattern} bind def
+} def
+%
+%
+%End of PostScript Level 2 code
+%
+/PatternBgnd {
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+} def
+%
+% Substitute for Level 2 pattern fill codes with
+% grayscale if Level 2 support is not selected.
+%
+/Level1PatternFill {
+/Pattern1 {0.250 Density} bind def
+/Pattern2 {0.500 Density} bind def
+/Pattern3 {0.750 Density} bind def
+/Pattern4 {0.125 Density} bind def
+/Pattern5 {0.375 Density} bind def
+/Pattern6 {0.625 Density} bind def
+/Pattern7 {0.875 Density} bind def
+} def
+%
+% Now test for support of Level 2 code
+%
+Level1 {Level1PatternFill} {Level2PatternFill} ifelse
+%
+/Symbol-Oblique /Symbol findfont [1 0 .167 1 0 0] makefont
+dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
+currentdict end definefont pop
+/MFshow {
+   { dup 5 get 3 ge
+     { 5 get 3 eq {gsave} {grestore} ifelse }
+     {dup dup 0 get findfont exch 1 get scalefont setfont
+     [ currentpoint ] exch dup 2 get 0 exch R dup 5 get 2 ne {dup dup 6
+     get exch 4 get {Gshow} {stringwidth pop 0 R} ifelse }if dup 5 get 0 eq
+     {dup 3 get {2 get neg 0 exch R pop} {pop aload pop M} ifelse} {dup 5
+     get 1 eq {dup 2 get exch dup 3 get exch 6 get stringwidth pop -2 div
+     dup 0 R} {dup 6 get stringwidth pop -2 div 0 R 6 get
+     show 2 index {aload pop M neg 3 -1 roll neg R pop pop} {pop pop pop
+     pop aload pop M} ifelse }ifelse }ifelse }
+     ifelse }
+   forall} def
+/Gswidth {dup type /stringtype eq {stringwidth} {pop (n) stringwidth} ifelse} def
+/MFwidth {0 exch { dup 5 get 3 ge { 5 get 3 eq { 0 } { pop } ifelse }
+ {dup 3 get{dup dup 0 get findfont exch 1 get scalefont setfont
+     6 get Gswidth pop add} {pop} ifelse} ifelse} forall} def
+/MLshow { currentpoint stroke M
+  0 exch R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MRshow { currentpoint stroke M
+  exch dup MFwidth neg 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MCshow { currentpoint stroke M
+  exch dup MFwidth -2 div 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/XYsave    { [( ) 1 2 true false 3 ()] } bind def
+/XYrestore { [( ) 1 2 true false 4 ()] } bind def
+Level1 SuppressPDFMark or 
+{} {
+/SDict 10 dict def
+systemdict /pdfmark known not {
+  userdict /pdfmark systemdict /cleartomark get put
+} if
+SDict begin [
+  /Title (EW_cprg.ps)
+  /Subject (gnuplot plot)
+  /Creator (gnuplot 4.6 patchlevel 2)
+  /Author (ptaeb)
+%  /Producer (gnuplot)
+%  /Keywords ()
+  /CreationDate (Wed Nov  7 10:54:08 2018)
+  /DOCINFO pdfmark
+end
+} ifelse
+end
+%%EndProlog
+%%Page: 1 1
+gnudict begin
+gsave
+doclip
+50 50 translate
+0.100 0.100 scale
+90 rotate
+0 -5040 translate
+0 setgray
+newpath
+(Times-Roman) findfont 150 scalefont setfont
+BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {gsave BackgroundColor C clippath fill grestore} if
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+735 1650 M
+6194 0 V
+stroke
+LTb
+LCb setrgbcolor
+735 1650 M
+63 0 V
+6131 0 R
+-63 0 V
+stroke
+645 1650 M
+[ [(Times-Roman) 150.0 0.0 true true 0 ( 0)]
+] -50.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+735 1977 M
+6194 0 V
+stroke
+LTb
+LCb setrgbcolor
+735 1977 M
+63 0 V
+6131 0 R
+-63 0 V
+stroke
+645 1977 M
+[ [(Times-Roman) 150.0 0.0 true true 0 ( 0.2)]
+] -50.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+735 2303 M
+6194 0 V
+stroke
+LTb
+LCb setrgbcolor
+735 2303 M
+63 0 V
+6131 0 R
+-63 0 V
+stroke
+645 2303 M
+[ [(Times-Roman) 150.0 0.0 true true 0 ( 0.4)]
+] -50.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+735 2630 M
+6194 0 V
+stroke
+LTb
+LCb setrgbcolor
+735 2630 M
+63 0 V
+6131 0 R
+-63 0 V
+stroke
+645 2630 M
+[ [(Times-Roman) 150.0 0.0 true true 0 ( 0.6)]
+] -50.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+735 2956 M
+6194 0 V
+stroke
+LTb
+LCb setrgbcolor
+735 2956 M
+63 0 V
+6131 0 R
+-63 0 V
+stroke
+645 2956 M
+[ [(Times-Roman) 150.0 0.0 true true 0 ( 0.8)]
+] -50.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+735 3283 M
+6194 0 V
+stroke
+LTb
+LCb setrgbcolor
+735 3283 M
+63 0 V
+6131 0 R
+-63 0 V
+stroke
+645 3283 M
+[ [(Times-Roman) 150.0 0.0 true true 0 ( 1)]
+] -50.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+735 3609 M
+6194 0 V
+stroke
+LTb
+LCb setrgbcolor
+735 3609 M
+63 0 V
+6131 0 R
+-63 0 V
+stroke
+645 3609 M
+[ [(Times-Roman) 150.0 0.0 true true 0 ( 1.2)]
+] -50.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+735 3936 M
+6194 0 V
+stroke
+LTb
+LCb setrgbcolor
+735 3936 M
+63 0 V
+6131 0 R
+-63 0 V
+stroke
+645 3936 M
+[ [(Times-Roman) 150.0 0.0 true true 0 ( 1.4)]
+] -50.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+735 4262 M
+6194 0 V
+stroke
+LTb
+LCb setrgbcolor
+735 4262 M
+63 0 V
+6131 0 R
+-63 0 V
+stroke
+645 4262 M
+[ [(Times-Roman) 150.0 0.0 true true 0 ( 1.6)]
+] -50.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+735 4589 M
+6194 0 V
+stroke
+LTb
+LCb setrgbcolor
+735 4589 M
+63 0 V
+6131 0 R
+-63 0 V
+stroke
+645 4589 M
+[ [(Times-Roman) 150.0 0.0 true true 0 ( 1.8)]
+] -50.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1450 1650 M
+0 31 V
+0 2908 R
+0 -31 V
+2403 1650 M
+0 31 V
+0 2908 R
+0 -31 V
+3356 1650 M
+0 31 V
+0 2908 R
+0 -31 V
+4308 1650 M
+0 31 V
+0 2908 R
+0 -31 V
+5261 1650 M
+0 31 V
+0 2908 R
+0 -31 V
+6214 1650 M
+0 31 V
+0 2908 R
+0 -31 V
+stroke
+LTb
+LCb setrgbcolor
+735 4589 N
+0 -2939 V
+6194 0 V
+0 2939 V
+-6194 0 V
+Z stroke
+LCb setrgbcolor
+120 3119 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Times-Roman) 150.0 0.0 true true 0 (Surface Elevation \(m\) NAVD88)]
+] -50.0 MCshow
+grestore
+LTb
+3832 4814 M
+[ [(Times-Roman) 150.0 0.0 true true 0 (Sebastian Inlet \(CPRG station 80.445W 27.861N\); Cycle %cycle%)]
+] -50.0 MCshow
+1.000 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+% Begin plot #1
+1.000 UL
+LT0
+LC4 setrgbcolor
+% End plot #1
+% Begin plot #2
+1.000 UL
+LT1
+LC4 setrgbcolor
+% End plot #2
+% Begin plot #3
+1.000 UL
+LT2
+LC4 setrgbcolor
+% End plot #3
+% Begin plot #4
+1.000 UL
+LT3
+LC4 setrgbcolor
+% End plot #4
+% Begin plot #5
+1.000 UL
+LT4
+LC4 setrgbcolor
+% End plot #5
+% Begin plot #6
+1.000 UL
+LT5
+LC4 setrgbcolor
+% End plot #6
+% Begin plot #7
+1.000 UL
+LT6
+LC8 setrgbcolor
+% End plot #7
+% Begin plot #8
+1.000 UL
+LT7
+LC8 setrgbcolor
+% End plot #8
+% Begin plot #9
+1.000 UL
+LT8
+LC8 setrgbcolor
+% End plot #9
+% Begin plot #10
+1.000 UL
+LT0
+LC8 setrgbcolor
+% End plot #10
+% Begin plot #11
+1.000 UL
+LT1
+LC8 setrgbcolor
+% End plot #11
+% Begin plot #12
+1.000 UL
+LT2
+LC8 setrgbcolor
+% End plot #12
+% Begin plot #13
+2.000 UL
+LT0
+LC6 setrgbcolor
+% End plot #13
+% Begin plot #14
+2.000 UL
+LT0
+LC0 setrgbcolor
+% End plot #14
+% Begin plot #15
+2.000 UL
+LT0
+LC2 setrgbcolor
+% End plot #15
+% Begin plot #16
+2.000 UL
+LT0
+LC3 setrgbcolor
+% End plot #16
+% Begin plot #17
+5.000 UL
+LT1
+LC6 setrgbcolor
+% End plot #17
+% Begin plot #18
+1.000 UL
+LT8
+1.00 0.65 0.00 C LCb setrgbcolor
+5241 1188 M
+[ [(Times-Roman) 150.0 0.0 true true 0 (Observed)]
+] -50.0 MRshow
+LT8
+1.00 0.65 0.00 C gsave 5579 1188 N -1 1 V 0 2 V 0 2 V 0 2 V -1 2 V 0 2 V -1 2 V -1 2 V -1 1 V 0 2 V -1 2 V -2 1 V -1 2 V -1 1 V -1 2 V -2 1 V -1 1 V -2 1 V -1 2 V -2 1 V -2 0 V -1 1 V -2 1 V -2 1 V -2 0 V -2 1 V -2 0 V -2 0 V -2 0 V -1 1 V -2 -1 V -2 0 V -2 0 V -2 0 V -2 -1 V -2 0 V -2 -1 V -2 -1 V -1 -1 V -2 0 V -2 -1 V -1 -2 V -2 -1 V -1 -1 V -2 -1 V -1 -2 V -1 -1 V -1 -2 V -2 -1 V -1 -2 V 0 -2 V -1 -1 V -1 -2 V -1 -2 V 0 -2 V -1 -2 V 0 -2 V 0 -2 V 0 -2 V 0 -1 V 0 -2 V 0 -2 V 0 -2 V 0 -2 V 1 -2 V 0 -2 V 1 -2 V 1 -2 V 1 -1 V 0 -2 V 1 -2 V 2 -1 V 1 -2 V 1 -1 V 1 -2 V 2 -1 V 1 -1 V 2 -1 V 1 -2 V 2 -1 V 2 0 V 1 -1 V 2 -1 V 2 -1 V 2 0 V 2 -1 V 2 0 V 2 0 V 2 0 V 2 0 V 1 0 V 2 0 V 2 0 V 2 0 V 2 1 V 2 0 V 2 1 V 2 1 V 1 1 V 2 0 V 2 1 V 1 2 V 2 1 V 1 1 V 5568 1161 L 1 2 V 1 1 V 1 2 V 2 1 V 1 2 V 0 2 V 1 1 V 1 2 V 1 2 V 0 2 V 1 2 V 0 2 V 0 2 V 0 2 V 1 2 V 1 PolyFill
+1.000 UL
+LT8
+1.00 0.65 0.00 C gsave 1132 2944 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V 0 -397 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 20 -397 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 15 15 V 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 1105 2801 L 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+1132 2944 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+0 -397 V
+20 -397 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 1251 2994 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -16 -18 V 0 -57 V 0 -42 V 0 -33 V 0 -27 V 0 -23 V 0 -19 V 0 -17 V 0 -15 V 0 -13 V 0 -12 V 0 -11 V 0 -9 V 0 -9 V 0 -9 V 0 -8 V 0 -8 V 0 -7 V 0 -7 V 0 -7 V 0 -6 V 0 -7 V 0 -6 V 0 -7 V 0 -6 V 0 -7 V 0 -6 V 0 -7 V 0 -6 V 0 -6 V 0 -7 V 0 -7 V 0 -8 V 0 -7 V 0 -8 V 0 -9 V 0 -9 V 0 -10 V 0 -10 V 0 -12 V 0 -14 V 0 -15 V 0 -16 V 0 -19 V 0 -23 V 0 -27 V 0 -34 V 0 -42 V 0 -57 V 16 -18 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 20 -1 V 21 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 1134 2713 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+1251 2994 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-16 -18 V
+0 -57 V
+0 -42 V
+0 -33 V
+0 -27 V
+0 -23 V
+0 -19 V
+0 -17 V
+0 -15 V
+0 -13 V
+0 -12 V
+0 -11 V
+0 -9 V
+0 -9 V
+0 -9 V
+0 -8 V
+0 -8 V
+0 -7 V
+0 -7 V
+0 -7 V
+0 -6 V
+0 -7 V
+0 -6 V
+0 -7 V
+0 -6 V
+0 -7 V
+0 -6 V
+0 -7 V
+0 -6 V
+0 -6 V
+0 -7 V
+0 -7 V
+0 -8 V
+0 -7 V
+0 -8 V
+0 -9 V
+0 -9 V
+0 -10 V
+0 -10 V
+0 -12 V
+0 -14 V
+0 -15 V
+0 -16 V
+0 -19 V
+0 -23 V
+0 -27 V
+0 -34 V
+0 -42 V
+0 -57 V
+16 -18 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+20 -1 V
+21 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 1119 2698 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 1370 2695 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -4 -27 V 0 -30 V 0 -26 V 0 -24 V 0 -22 V 0 -19 V 0 -18 V 0 -18 V 0 -15 V 0 -16 V 0 -14 V 0 -15 V 0 -13 V 0 -13 V 0 -13 V 0 -13 V 0 -13 V 0 -12 V 0 -13 V 0 -13 V 0 -13 V 0 -12 V 0 -13 V 0 -14 V 0 -14 V 0 -15 V 0 -15 V 0 -16 V 0 -18 V 0 -17 V 0 -20 V 0 -21 V 0 -24 V 0 -27 V 0 -30 V 4 -27 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 20 -1 V 21 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 1253 2414 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+1370 2695 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-4 -27 V
+0 -30 V
+0 -26 V
+0 -24 V
+0 -22 V
+0 -19 V
+0 -18 V
+0 -18 V
+0 -15 V
+0 -16 V
+0 -14 V
+0 -15 V
+0 -13 V
+0 -13 V
+0 -13 V
+0 -13 V
+0 -13 V
+0 -12 V
+0 -13 V
+0 -13 V
+0 -13 V
+0 -12 V
+0 -13 V
+0 -14 V
+0 -14 V
+0 -15 V
+0 -15 V
+0 -16 V
+0 -18 V
+0 -17 V
+0 -20 V
+0 -21 V
+0 -24 V
+0 -27 V
+0 -30 V
+4 -27 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+20 -1 V
+21 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 1238 2399 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 1489 2645 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -3 -21 V 0 -22 V 0 -21 V 0 -21 V 0 -19 V 0 -19 V 0 -19 V 0 -20 V 0 -18 V 0 -19 V 0 -19 V 0 -20 V 0 -19 V 0 -19 V 0 -21 V 0 -21 V 0 -22 V 3 -21 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 1372 2364 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+1489 2645 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-3 -21 V
+0 -22 V
+0 -21 V
+0 -21 V
+0 -19 V
+0 -19 V
+0 -19 V
+0 -20 V
+0 -18 V
+0 -19 V
+0 -19 V
+0 -20 V
+0 -19 V
+0 -19 V
+0 -21 V
+0 -21 V
+0 -22 V
+3 -21 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 1357 2349 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 1608 2546 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 1491 2265 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+1608 2546 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 1476 2250 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 1728 2446 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 1611 2165 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+1728 2446 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 1596 2150 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 1847 2297 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 1730 2016 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+1847 2297 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 1715 2001 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 1966 2247 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 1849 1966 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+1966 2247 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 1834 1951 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 2085 2148 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 1968 1867 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+2085 2148 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 1953 1852 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 2204 1998 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 21 -4 V 22 0 V 21 0 V 21 0 V 20 0 V 19 0 V 19 0 V 18 0 V 19 0 V 19 0 V 18 0 V 19 0 V 18 0 V 19 0 V 19 0 V 20 0 V 21 0 V 21 0 V 22 0 V 21 4 V 18 11 V 17 11 V 16 13 V 16 13 V 2087 1717 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+2204 1998 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+21 -4 V
+22 0 V
+21 0 V
+21 0 V
+20 0 V
+19 0 V
+19 0 V
+18 0 V
+19 0 V
+19 0 V
+18 0 V
+19 0 V
+18 0 V
+19 0 V
+19 0 V
+20 0 V
+21 0 V
+21 0 V
+22 0 V
+21 4 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 2072 1702 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 2323 1949 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 24 -3 V 24 0 V 23 0 V 22 0 V 20 0 V 19 0 V 18 0 V 18 0 V 17 0 V 17 0 V 16 0 V 16 0 V 16 0 V 16 0 V 16 0 V 16 0 V 16 0 V 16 0 V 16 0 V 17 0 V 18 0 V 18 0 V 20 0 V 20 0 V 21 0 V 23 0 V 24 0 V 24 3 V 2206 1668 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+2323 1949 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+24 -3 V
+24 0 V
+23 0 V
+22 0 V
+20 0 V
+19 0 V
+18 0 V
+18 0 V
+17 0 V
+17 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+17 0 V
+18 0 V
+18 0 V
+20 0 V
+20 0 V
+21 0 V
+23 0 V
+24 0 V
+24 3 V
+stroke 2191 1653 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 2442 1949 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 24 -3 V 24 0 V 23 0 V 22 0 V 20 0 V 19 0 V 18 0 V 18 0 V 17 0 V 17 0 V 16 0 V 16 0 V 16 0 V 16 0 V 16 0 V 16 0 V 16 0 V 16 0 V 16 0 V 17 0 V 18 0 V 18 0 V 20 0 V 20 0 V 21 0 V 23 0 V 24 0 V 24 3 V 2325 1668 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+2442 1949 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+24 -3 V
+24 0 V
+23 0 V
+22 0 V
+20 0 V
+19 0 V
+18 0 V
+18 0 V
+17 0 V
+17 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+17 0 V
+18 0 V
+18 0 V
+20 0 V
+20 0 V
+21 0 V
+23 0 V
+24 0 V
+24 3 V
+stroke 2310 1653 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 2561 1849 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 38 0 V 32 0 V 28 0 V 24 0 V 23 0 V 20 0 V 17 0 V 17 0 V 15 0 V 14 0 V 14 0 V 13 0 V 12 0 V 12 0 V 11 0 V 11 0 V 11 0 V 10 0 V 11 0 V 11 0 V 11 0 V 10 0 V 11 0 V 10 0 V 11 0 V 12 0 V 12 0 V 12 0 V 13 0 V 13 0 V 15 0 V 14 0 V 17 0 V 18 0 V 2363 1650 L 22 0 V 25 0 V 27 0 V 32 0 V 38 0 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+2561 1849 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+38 0 V
+32 0 V
+28 0 V
+24 0 V
+23 0 V
+20 0 V
+17 0 V
+17 0 V
+15 0 V
+14 0 V
+14 0 V
+13 0 V
+12 0 V
+12 0 V
+11 0 V
+11 0 V
+11 0 V
+10 0 V
+11 0 V
+11 0 V
+11 0 V
+10 0 V
+11 0 V
+10 0 V
+11 0 V
+12 0 V
+12 0 V
+12 0 V
+13 0 V
+13 0 V
+15 0 V
+14 0 V
+17 0 V
+18 0 V
+stroke 2343 1650 M
+20 0 V
+22 0 V
+25 0 V
+27 0 V
+32 0 V
+38 0 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 2681 1799 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 37 -6 V 42 0 V 34 0 V 29 0 V 23 0 V 21 0 V 19 0 V 17 0 V 15 0 V 13 0 V 12 0 V 11 0 V 11 0 V 10 0 V 10 0 V 9 0 V 9 0 V 9 0 V 8 0 V 8 0 V 8 0 V 8 0 V 8 0 V 8 0 V 8 0 V 8 0 V 8 0 V 8 0 V 9 0 V 9 0 V 9 0 V 9 0 V 10 0 V 11 0 V 11 0 V 13 0 V 13 0 V 2433 1650 L 17 0 V 18 0 V 21 0 V 23 0 V 29 0 V 34 0 V 42 0 V 37 6 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+2681 1799 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+37 -6 V
+42 0 V
+34 0 V
+29 0 V
+23 0 V
+21 0 V
+19 0 V
+17 0 V
+15 0 V
+13 0 V
+12 0 V
+11 0 V
+11 0 V
+10 0 V
+10 0 V
+9 0 V
+9 0 V
+9 0 V
+8 0 V
+8 0 V
+8 0 V
+8 0 V
+8 0 V
+8 0 V
+8 0 V
+8 0 V
+8 0 V
+8 0 V
+9 0 V
+9 0 V
+9 0 V
+9 0 V
+10 0 V
+11 0 V
+11 0 V
+13 0 V
+13 0 V
+stroke 2418 1650 M
+15 0 V
+17 0 V
+18 0 V
+21 0 V
+23 0 V
+29 0 V
+34 0 V
+42 0 V
+37 6 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 2800 1849 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 38 0 V 32 0 V 28 0 V 24 0 V 23 0 V 20 0 V 17 0 V 17 0 V 15 0 V 14 0 V 14 0 V 13 0 V 12 0 V 12 0 V 11 0 V 11 0 V 11 0 V 10 0 V 11 0 V 11 0 V 11 0 V 10 0 V 11 0 V 10 0 V 11 0 V 12 0 V 12 0 V 12 0 V 13 0 V 13 0 V 15 0 V 14 0 V 17 0 V 18 0 V 2602 1650 L 22 0 V 25 0 V 27 0 V 32 0 V 38 0 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+2800 1849 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+38 0 V
+32 0 V
+28 0 V
+24 0 V
+23 0 V
+20 0 V
+17 0 V
+17 0 V
+15 0 V
+14 0 V
+14 0 V
+13 0 V
+12 0 V
+12 0 V
+11 0 V
+11 0 V
+11 0 V
+10 0 V
+11 0 V
+11 0 V
+11 0 V
+10 0 V
+11 0 V
+10 0 V
+11 0 V
+12 0 V
+12 0 V
+12 0 V
+13 0 V
+13 0 V
+15 0 V
+14 0 V
+17 0 V
+18 0 V
+stroke 2582 1650 M
+20 0 V
+22 0 V
+25 0 V
+27 0 V
+32 0 V
+38 0 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 2919 1799 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 37 -6 V 42 0 V 34 0 V 29 0 V 23 0 V 21 0 V 19 0 V 17 0 V 15 0 V 13 0 V 12 0 V 11 0 V 11 0 V 10 0 V 10 0 V 9 0 V 9 0 V 9 0 V 8 0 V 8 0 V 8 0 V 8 0 V 8 0 V 8 0 V 8 0 V 8 0 V 8 0 V 8 0 V 9 0 V 9 0 V 9 0 V 9 0 V 10 0 V 11 0 V 11 0 V 13 0 V 13 0 V 2671 1650 L 17 0 V 18 0 V 21 0 V 23 0 V 29 0 V 34 0 V 42 0 V 37 6 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+2919 1799 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+37 -6 V
+42 0 V
+34 0 V
+29 0 V
+23 0 V
+21 0 V
+19 0 V
+17 0 V
+15 0 V
+13 0 V
+12 0 V
+11 0 V
+11 0 V
+10 0 V
+10 0 V
+9 0 V
+9 0 V
+9 0 V
+8 0 V
+8 0 V
+8 0 V
+8 0 V
+8 0 V
+8 0 V
+8 0 V
+8 0 V
+8 0 V
+8 0 V
+9 0 V
+9 0 V
+9 0 V
+9 0 V
+10 0 V
+11 0 V
+11 0 V
+13 0 V
+13 0 V
+stroke 2656 1650 M
+15 0 V
+17 0 V
+18 0 V
+21 0 V
+23 0 V
+29 0 V
+34 0 V
+42 0 V
+37 6 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 3038 1849 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 38 0 V 32 0 V 28 0 V 24 0 V 23 0 V 20 0 V 17 0 V 17 0 V 15 0 V 14 0 V 14 0 V 13 0 V 12 0 V 12 0 V 11 0 V 11 0 V 11 0 V 10 0 V 11 0 V 11 0 V 11 0 V 10 0 V 11 0 V 10 0 V 11 0 V 12 0 V 12 0 V 12 0 V 13 0 V 13 0 V 15 0 V 14 0 V 17 0 V 18 0 V 2840 1650 L 22 0 V 25 0 V 27 0 V 32 0 V 38 0 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+3038 1849 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+38 0 V
+32 0 V
+28 0 V
+24 0 V
+23 0 V
+20 0 V
+17 0 V
+17 0 V
+15 0 V
+14 0 V
+14 0 V
+13 0 V
+12 0 V
+12 0 V
+11 0 V
+11 0 V
+11 0 V
+10 0 V
+11 0 V
+11 0 V
+11 0 V
+10 0 V
+11 0 V
+10 0 V
+11 0 V
+12 0 V
+12 0 V
+12 0 V
+13 0 V
+13 0 V
+15 0 V
+14 0 V
+17 0 V
+18 0 V
+stroke 2820 1650 M
+20 0 V
+22 0 V
+25 0 V
+27 0 V
+32 0 V
+38 0 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 3157 1949 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 24 -3 V 24 0 V 23 0 V 22 0 V 20 0 V 19 0 V 18 0 V 18 0 V 17 0 V 17 0 V 16 0 V 16 0 V 16 0 V 16 0 V 16 0 V 16 0 V 16 0 V 16 0 V 16 0 V 17 0 V 18 0 V 18 0 V 20 0 V 20 0 V 21 0 V 23 0 V 24 0 V 24 3 V 3040 1668 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+3157 1949 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+24 -3 V
+24 0 V
+23 0 V
+22 0 V
+20 0 V
+19 0 V
+18 0 V
+18 0 V
+17 0 V
+17 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+17 0 V
+18 0 V
+18 0 V
+20 0 V
+20 0 V
+21 0 V
+23 0 V
+24 0 V
+24 3 V
+stroke 3025 1653 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 3276 1998 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 21 -4 V 22 0 V 21 0 V 21 0 V 20 0 V 19 0 V 19 0 V 18 0 V 19 0 V 19 0 V 18 0 V 19 0 V 18 0 V 19 0 V 19 0 V 20 0 V 21 0 V 21 0 V 22 0 V 21 4 V 18 11 V 17 11 V 16 13 V 16 13 V 3159 1717 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+3276 1998 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+21 -4 V
+22 0 V
+21 0 V
+21 0 V
+20 0 V
+19 0 V
+19 0 V
+18 0 V
+19 0 V
+19 0 V
+18 0 V
+19 0 V
+18 0 V
+19 0 V
+19 0 V
+20 0 V
+21 0 V
+21 0 V
+22 0 V
+21 4 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 3144 1702 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 3395 2098 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 3278 1817 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+3395 2098 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 3263 1802 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 3514 2148 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 3397 1867 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+3514 2148 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 3382 1852 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 3633 2247 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 3516 1966 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+3633 2247 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 3501 1951 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 3753 2397 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 3636 2116 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+3753 2397 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 3621 2101 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 3872 2446 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 3755 2165 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+3872 2446 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 3740 2150 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 3991 2546 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 3874 2265 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+3991 2546 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 3859 2250 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 4110 2695 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 3993 2414 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+4110 2695 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 3978 2399 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 4229 2894 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 4112 2613 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+4229 2894 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 4097 2598 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 4348 2994 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 4231 2713 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+4348 2994 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 4216 2698 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 4467 3143 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 4350 2862 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+4467 3143 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 4335 2847 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 4586 3143 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 4469 2862 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+4586 3143 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 4454 2847 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 4705 3342 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 4588 3061 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+4705 3342 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 4573 3046 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 4825 3342 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 4708 3061 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+4825 3342 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 4693 3046 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 4944 3342 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 4827 3061 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+4944 3342 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 4812 3046 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 5063 3641 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 4946 3360 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+5063 3641 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 4931 3345 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 5182 3641 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 5065 3360 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+5182 3641 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 5050 3345 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 5301 3740 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 5184 3459 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+5301 3740 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 5169 3444 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 5420 3840 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 5303 3559 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+5420 3840 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 5288 3544 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 5539 3740 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 5422 3459 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+5539 3740 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 5407 3444 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 5658 3840 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 5541 3559 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+5658 3840 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 5526 3544 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 5778 3890 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 5661 3609 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+5778 3890 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 5646 3594 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 5897 3989 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 5780 3708 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+5897 3989 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 5765 3693 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 6016 4487 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -67 0 V -50 0 V -36 0 V -29 0 V -24 0 V -20 0 V -16 0 V -14 0 V -13 0 V -12 0 V -10 0 V -9 0 V -8 0 V -8 0 V -8 0 V -6 0 V -7 0 V -6 0 V -6 0 V -6 0 V -6 0 V -5 0 V -6 0 V -5 0 V -6 0 V -6 0 V -5 0 V -6 0 V -5 0 V -6 0 V -6 0 V -6 0 V -6 0 V -7 0 V -7 0 V -7 0 V -8 0 V -8 0 V -9 0 V -11 0 V -11 0 V -13 0 V -14 0 V -17 0 V -20 0 V -23 0 V -29 0 V -37 0 V -50 0 V -67 0 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 5899 4206 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+6016 4487 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-67 0 V
+-50 0 V
+-36 0 V
+-29 0 V
+-24 0 V
+-20 0 V
+-16 0 V
+-14 0 V
+-13 0 V
+-12 0 V
+-10 0 V
+-9 0 V
+-8 0 V
+-8 0 V
+-8 0 V
+-6 0 V
+-7 0 V
+-6 0 V
+-6 0 V
+-6 0 V
+-6 0 V
+-5 0 V
+-6 0 V
+-5 0 V
+-6 0 V
+-6 0 V
+-5 0 V
+-6 0 V
+-5 0 V
+-6 0 V
+-6 0 V
+-6 0 V
+-6 0 V
+-7 0 V
+-7 0 V
+-7 0 V
+-8 0 V
+-8 0 V
+-9 0 V
+-11 0 V
+-11 0 V
+-13 0 V
+-14 0 V
+-17 0 V
+-20 0 V
+-23 0 V
+-29 0 V
+-37 0 V
+-50 0 V
+-67 0 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 5884 4191 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 6135 3840 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 6018 3559 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+6135 3840 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 6003 3544 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 6254 3840 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 6137 3559 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+6254 3840 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 6122 3544 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 6373 3740 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 6256 3459 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+6373 3740 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 6241 3444 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 6492 3690 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 6375 3409 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+6492 3690 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 6360 3394 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 6611 3591 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 6494 3310 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+6611 3591 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 6479 3295 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 6730 3641 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 6613 3360 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+6730 3641 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 6598 3345 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 6850 3392 N -1 20 V -2 21 V -2 21 V -4 20 V -5 20 V -6 20 V -7 20 V -8 19 V -9 19 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 6733 3111 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 9 19 V 8 19 V 7 20 V 6 20 V 5 20 V 4 20 V 2 21 V 2 21 V 1 21 V 1 PolyFill
+LC0 setrgbcolor
+6850 3392 M
+-1 20 V
+-2 21 V
+-2 21 V
+-4 20 V
+-5 20 V
+-6 20 V
+-7 20 V
+-8 19 V
+-9 19 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 6718 3096 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+9 19 V
+8 19 V
+7 20 V
+6 20 V
+5 20 V
+4 20 V
+2 21 V
+2 21 V
+1 21 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 6929 3342 N 0 19 V 0 19 V 0 19 V 0 19 V 0 20 V 0 20 V 0 22 V 0 21 V -4 21 V -10 18 V -11 18 V -11 17 V -13 16 V -13 16 V -15 15 V -15 15 V -16 13 V -16 13 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 16 13 V 16 13 V 6852 3061 L 15 15 V 13 16 V 13 16 V 11 17 V 11 18 V 10 18 V 4 21 V 0 22 V 0 21 V 0 20 V 0 20 V 0 19 V 0 19 V 0 20 V 0 19 V 1 PolyFill
+LC0 setrgbcolor
+6929 3342 M
+0 19 V
+0 19 V
+0 19 V
+0 19 V
+0 20 V
+0 20 V
+0 22 V
+0 21 V
+-4 21 V
+-10 18 V
+-11 18 V
+-11 17 V
+-13 16 V
+-13 16 V
+-15 15 V
+-15 15 V
+-16 13 V
+-16 13 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+16 13 V
+16 13 V
+stroke 6837 3046 M
+15 15 V
+15 15 V
+13 16 V
+13 16 V
+11 17 V
+11 18 V
+10 18 V
+4 21 V
+0 22 V
+0 21 V
+0 20 V
+0 20 V
+0 19 V
+0 19 V
+0 20 V
+0 19 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 6929 3243 N 0 13 V 0 12 V 0 13 V 0 13 V 0 13 V 0 14 V 0 14 V 0 14 V 0 16 V 0 16 V 0 17 V 0 18 V 0 20 V 0 21 V 0 24 V 0 27 V 0 30 V -5 26 V -17 11 V -18 11 V -18 10 V -19 9 V -19 8 V -20 7 V -20 6 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 20 6 V 20 7 V 19 8 V 19 9 V 18 10 V 18 11 V 17 11 V 5 26 V 0 30 V 6929 3004 L 0 24 V 0 21 V 0 20 V 0 18 V 0 17 V 0 16 V 0 16 V 0 15 V 0 14 V 0 13 V 0 14 V 0 12 V 0 13 V 0 13 V 0 13 V 1 PolyFill
+LC0 setrgbcolor
+6929 3243 M
+0 13 V
+0 12 V
+0 13 V
+0 13 V
+0 13 V
+0 14 V
+0 14 V
+0 14 V
+0 16 V
+0 16 V
+0 17 V
+0 18 V
+0 20 V
+0 21 V
+0 24 V
+0 27 V
+0 30 V
+-5 26 V
+-17 11 V
+-18 11 V
+-18 10 V
+-19 9 V
+-19 8 V
+-20 7 V
+-20 6 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+20 6 V
+20 7 V
+19 8 V
+19 9 V
+18 10 V
+18 11 V
+17 11 V
+5 26 V
+0 30 V
+stroke 6929 2977 M
+0 27 V
+0 24 V
+0 21 V
+0 20 V
+0 18 V
+0 17 V
+0 16 V
+0 16 V
+0 15 V
+0 14 V
+0 13 V
+0 14 V
+0 12 V
+0 13 V
+0 13 V
+0 13 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 6929 3243 N 0 7 V 0 6 V 0 6 V 0 7 V 0 6 V 0 7 V 0 7 V 0 7 V 0 8 V 0 8 V 0 9 V 0 9 V 0 10 V 0 10 V 0 12 V 0 14 V 0 15 V 0 16 V 0 19 V 0 24 V 0 27 V 0 34 V 0 43 V 0 57 V -17 15 V -20 5 V -20 4 V -21 2 V -21 2 V -20 1 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 20 1 V 21 2 V 21 2 V 20 4 V 20 5 V 17 15 V 0 58 V 0 42 V 0 34 V 0 28 V 0 23 V 0 19 V 0 17 V 0 15 V 6929 3123 L 0 12 V 0 11 V 0 10 V 0 9 V 0 8 V 0 8 V 0 8 V 0 8 V 0 7 V 0 6 V 0 7 V 0 6 V 0 7 V 0 6 V 0 7 V 1 PolyFill
+LC0 setrgbcolor
+6929 3243 M
+0 7 V
+0 6 V
+0 6 V
+0 7 V
+0 6 V
+0 7 V
+0 7 V
+0 7 V
+0 8 V
+0 8 V
+0 9 V
+0 9 V
+0 10 V
+0 10 V
+0 12 V
+0 14 V
+0 15 V
+0 16 V
+0 19 V
+0 24 V
+0 27 V
+0 34 V
+0 43 V
+0 57 V
+-17 15 V
+-20 5 V
+-20 4 V
+-21 2 V
+-21 2 V
+-20 1 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+20 1 V
+21 2 V
+21 2 V
+20 4 V
+20 5 V
+17 15 V
+0 58 V
+0 42 V
+0 34 V
+0 28 V
+0 23 V
+0 19 V
+0 17 V
+0 15 V
+stroke 6929 3110 M
+0 13 V
+0 12 V
+0 11 V
+0 10 V
+0 9 V
+0 8 V
+0 8 V
+0 8 V
+0 8 V
+0 7 V
+0 6 V
+0 7 V
+0 6 V
+0 7 V
+0 6 V
+0 7 V
+stroke
+LT8
+1.00 0.65 0.00 C gsave 6929 3243 N 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 397 V -21 -1 V -21 -2 V -21 -2 V -20 -4 V -20 -5 V -20 -6 V -20 -7 V -19 -8 V -19 -9 V -18 -10 V -18 -11 V -17 -11 V -16 -13 V -16 -13 V -15 -15 V -15 -15 V -13 -16 V -13 -16 V -11 -17 V -11 -18 V -10 -18 V -9 -19 V -8 -19 V -7 -20 V -6 -20 V -5 -20 V -4 -20 V -2 -21 V -2 -21 V -1 -20 V 1 -21 V 2 -21 V 2 -21 V 4 -20 V 5 -20 V 6 -20 V 7 -20 V 8 -19 V 9 -19 V 10 -18 V 11 -18 V 11 -17 V 13 -16 V 13 -16 V 15 -15 V 15 -15 V 16 -13 V 16 -13 V 17 -11 V 18 -11 V 18 -10 V 19 -9 V 19 -8 V 20 -7 V 20 -6 V 20 -5 V 20 -4 V 21 -2 V 21 -2 V 21 -1 V 0 398 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 6929 3243 L 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 0 0 V 1 PolyFill
+LC0 setrgbcolor
+6929 3243 M
+0 397 V
+-21 -1 V
+-21 -2 V
+-21 -2 V
+-20 -4 V
+-20 -5 V
+-20 -6 V
+-20 -7 V
+-19 -8 V
+-19 -9 V
+-18 -10 V
+-18 -11 V
+-17 -11 V
+-16 -13 V
+-16 -13 V
+-15 -15 V
+-15 -15 V
+-13 -16 V
+-13 -16 V
+-11 -17 V
+-11 -18 V
+-10 -18 V
+-9 -19 V
+-8 -19 V
+-7 -20 V
+-6 -20 V
+-5 -20 V
+-4 -20 V
+-2 -21 V
+-2 -21 V
+-1 -20 V
+1 -21 V
+2 -21 V
+2 -21 V
+4 -20 V
+5 -20 V
+6 -20 V
+7 -20 V
+8 -19 V
+9 -19 V
+10 -18 V
+11 -18 V
+11 -17 V
+13 -16 V
+13 -16 V
+15 -15 V
+15 -15 V
+16 -13 V
+16 -13 V
+17 -11 V
+18 -11 V
+18 -10 V
+19 -9 V
+19 -8 V
+20 -7 V
+20 -6 V
+20 -5 V
+20 -4 V
+21 -2 V
+21 -2 V
+21 -1 V
+0 398 V
+% End plot #18
+stroke
+LTb
+LCb setrgbcolor
+735 4589 N
+0 -2939 V
+6194 0 V
+0 2939 V
+-6194 0 V
+Z stroke
+1.000 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+stroke
+grestore
+end
+showpage
+%%Trailer
+%%DocumentFonts: Times-Roman
+%%Pages: 1
