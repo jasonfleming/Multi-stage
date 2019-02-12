@@ -1,0 +1,2 @@
+-80.540461  28.39867  ! offshorePortCapeCanaveral
+-80.56185   28.41021  ! TridentPier
