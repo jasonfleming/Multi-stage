@@ -5,7 +5,7 @@
   <img src="https://github.com/ptaeb2014/Multi-stage/blob/master/graphic.jpg">
 </p>
 
-MultiStage tool is compiled from developed and existing software components for automating nesting technique in the ADvanced CIRCulation (ADCIRC) model system for high-resolution coastal estuarine modeling applications. The tool is developed with the aim of reducing expensive computational cost associated with high-resolution modeling using the ADCIR model, and improving the forecast skill by performing ensemble approach and providing probabilistic solutions.
+MultiStage tool is compiled from developed and existing software components for automating nesting technique in the ADvanced CIRCulation (ADCIRC) model system for high-resolution coastal estuarine modeling. The tool is developed with the aim of reducing expensive computational cost of with high-resolution ADCIRC modeling, and improving the forecast skill by performing ensemble approach and providing probabilistic solutions.
 
 The current version supports conventional one-way nesting technique applied in the ADCIRC model. A large-scale coarse-resolution model communicates to a fine-scale high-resolution model through the specification of the open boundaries of the fine-resolution mesh. Nearshore predictions are made by the large-scale coarse and estuarine predictions are made by the fine-scale high-reosluion mesh runs.
 
