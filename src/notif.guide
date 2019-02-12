@@ -1,0 +1,19 @@
+				------------------
+			       |Architecture guide|
+				------------------
+                                     main.sh
+                                        |
+				 --------------- 
+				|		|
+			     N_s1_nam       F_s2_nam
+                                |               |
+                                 ---------------
+                                        |
+                              ---- postProc.sh ----      
+                             |                     |
+                        utility dir.          postProc dir.   
+		             |                     |
+                       nam_notify.sh          wallclock.pl
+                                                   |
+                                              notification  
+                                    
