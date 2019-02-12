@@ -1,0 +1,25 @@
+
+           boundary spec.                           elev. station output
+                |                                         |
+                |-----------------------------------------|
+                |  appending in F_s1_nam.sh
+                |
+                |
+                |
+                |
+      new BC spec. created
+          in $RUNDIR
+                |
+                |
+             fort.15
+                |
+                |             | time step 1
+             fort.61----------| ####       open node
+                |             | ####       open node
+                |             | ##         station outputs
+                |             | ##         station outputs
+                |
+                |
+           bcGen.61.x
+      reads & writes only for      
+      open nodes in fort.19
