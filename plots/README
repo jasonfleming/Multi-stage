@@ -1,0 +1,10 @@
+validation plots at
+  1-Wabasso (USGS)                                 water level
+  2-Haulover Canal (USGS)                          water level
+  3-Tident Pier (NOAA)                             water level + Wind speed and direction
+  4-Cape Canaveral Nearshore 41113(NOAA)           wave height
+  4-Sebastian Inlet (CPRG)                         water level + Wave height
+
+GIFS
+  IRL and full domain, animated model solution, water level as filled color contour and winds as vector
+  IRL and full domain, animated model solution, wave height as filled color contour and wave direction as vector
