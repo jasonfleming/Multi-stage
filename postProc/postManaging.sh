@@ -10,31 +10,57 @@ cycleDir=$3
 . ${mainDIR}/src/logging.sh
 
 # ------------------------------------------------------------
-#                         Archiving
+#                  Archiving and GitHubbing
 
 cd $mainDIR/$ID/$cycleDir
 
-cd validation_s1
-for file in `ls *.ps`
-do 
-  # Folder name is the same as PS file excluding .ps
-  # The following command trim the last 3 character: .ps
-  folder=`echo "${file::-3}"`
-  echo $file
-  cp $file $mainDIR/archive/$folder/$cycleDir'.ps'
-done
-cd -
-
-cd validation_s2
-for file in `ls *.ps`
+validationDir=( validation_s1 validation_s2 )
+for (( i=0 ; i<=1 ; i++ )) ;
 do
-  # Folder name is the same as PS file excluding .ps
-  # The following command trim the last 3 character: .ps
-  folder=`echo "${file::-3}"`
-  echo $file
-  cp $file $mainDIR/archive/$folder/$cycleDir'.ps'
+   cd ${validationDir[$i]}
+ 
+   # Archiving ps files for future use
+   for file in `ls *.ps`
+   do 
+     # Folder name is the same as PS file excluding .ps
+     # The following command trim the last 3 character: .ps
+     folder=`echo "${file::-3}"`
+     echo $file
+     cp $file $mainDIR/archive/$folder/$cycleDir'.ps'
+   done
+
+   # Copying jpg files for GitHub & Website
+   for file in `ls *.jpg`
+   do
+     # Folder name is the same as PS file excluding .ps
+     # The following command trim the last 3 character: .ps
+     cp $file /home4/ptaeb/GitHub/plots/
+ 
+     cd /home4/ptaeb/GitHub/
+     git add plots/$file
+     git commit -m "Upload $cycleDir"    
+     git push origin master
+     cd -
+
+   done
+
 done
-cd -
+
+# 4 more things for GitHub
+cp $mainDIR/$ID/$cycleDir/nam/S1/full_elev_wind.gif /home4/ptaeb/GitHub/plots/full_elev_wind.gif
+cp $mainDIR/$ID/$cycleDir/nam/S1/full_hs_dir.gif    /home4/ptaeb/GitHub/plots/full_elev_wind.gif
+
+cp $mainDIR/$ID/$cycleDir/nam/S2/irl_elev_wind.gif /home4/ptaeb/GitHub/plots/irl_elev_wind.gif
+cp $mainDIR/$ID/$cycleDir/nam/S2/irl_hs_dir.gif    /home4/ptaeb/GitHub/plots/irl_hs_dir.gif
+
+filess=( full_elev_wind.gif full_elev_wind.gif irl_elev_wind.gif irl_hs_dir.gif )
+for (( i=1 ; i<=3 ; i++ )) ;
+do
+    git add plots/${filess[$i]}
+    git commit -m "Upload $cycleDir"
+    git push origin master
+done
+
 # ------------------------------------------------------------
 #                       Free up space
 
@@ -50,7 +76,7 @@ current=`cat currentCycle`
 
 # Finding old directories
 old_dir=`date +'%Y%m%d' -d "$currentCycle 6 days ago"`
-
+	
 # List all files in the working dir 
 list=`find * -maxdepth 0 -type d | grep $old_dir`
 
