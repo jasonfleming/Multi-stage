@@ -43,17 +43,24 @@ do
      cd -
 
    done
+   
+   # redirect to  $mainDIR/$ID/$cycleDir
+   cd -
 
 done
 
 # 4 more things for GitHub
-cp $mainDIR/$ID/$cycleDir/nam/S1/full_elev_wind.gif /home4/ptaeb/GitHub/plots/full_elev_wind.gif
-cp $mainDIR/$ID/$cycleDir/nam/S1/full_hs_dir.gif    /home4/ptaeb/GitHub/plots/full_elev_wind.gif
+cp $mainDIR/$ID/$cycleDir/nam/S1/full_elev_wind.gif ${github}/plots/full_elev_wind.gif
+cp $mainDIR/$ID/$cycleDir/nam/S1/full_hs_dir.gif    ${github}/plots/full_elev_wind.gif
 
-cp $mainDIR/$ID/$cycleDir/nam/S2/irl_elev_wind.gif /home4/ptaeb/GitHub/plots/irl_elev_wind.gif
-cp $mainDIR/$ID/$cycleDir/nam/S2/irl_hs_dir.gif    /home4/ptaeb/GitHub/plots/irl_hs_dir.gif
+cp $mainDIR/$ID/$cycleDir/nam/S2/irl_elev_wind.gif  ${github}/plots/irl_elev_wind.gif
+cp $mainDIR/$ID/$cycleDir/nam/S2/irl_hs_dir.gif     ${github}/plots/irl_hs_dir.gif
 
 filess=( full_elev_wind.gif full_elev_wind.gif irl_elev_wind.gif irl_hs_dir.gif )
+
+# cd GITHUB
+cd ${github}
+
 for (( i=1 ; i<=3 ; i++ )) ;
 do
     git add plots/${filess[$i]}
