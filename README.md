@@ -1,4 +1,4 @@
-# Seven-member ensemble high-resolution estuarine forecast system known as Ensemble-Multistage
+# Seven-member ensemble, high-resolution estuarine forecast system known as Ensemble-Multistage
 ## (Adjusted one-way nesting technique for coastal estuarine modeling in the ADCIRC model)
 
 <p align="center">
