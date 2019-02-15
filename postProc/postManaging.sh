@@ -51,7 +51,7 @@ done
 
 # 4 more things for GitHub
 cp $mainDIR/$ID/$cycleDir/nam/S1/full_elev_wind.gif ${github}/plots/full_elev_wind.gif
-cp $mainDIR/$ID/$cycleDir/nam/S1/full_hs_dir.gif    ${github}/plots/full_elev_wind.gif
+cp $mainDIR/$ID/$cycleDir/nam/S1/full_hs_dir.gif    ${github}/plots/full_hs_dir.gif   
 
 cp $mainDIR/$ID/$cycleDir/nam/S2/irl_elev_wind.gif  ${github}/plots/irl_elev_wind.gif
 cp $mainDIR/$ID/$cycleDir/nam/S2/irl_hs_dir.gif     ${github}/plots/irl_hs_dir.gif
