@@ -169,8 +169,5 @@ notify_list="ptaeb2014@my.fit.edu"
 #-------------------------------------------------------------------
 INITPOST=FIT_init_post.sh
 POSTPROCESS=visualize_post.sh
-POSTPROCESS2=null
 TARGET=coconut
-OPENDAPHOST=br0.renci.org
-OPENDAPUSER=ncfc
-OPENDAPBASEDIR=/home3/ptaeb/asgs/opendap/data
+github=/home4/ptaeb/GitHub/
