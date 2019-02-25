@@ -25,6 +25,9 @@ if [[ $site = wabasso ]]; then
 elif [[ $site = haulovercanal ]]; then
    site_no=02248380
 fi
+
+# Info
+echo "Info: Wrking on station $site ... "
    
 # Getting year, month, day, hour, and minute of the current run
 st_y=`cat $fort_61   | head -3 | tail -1 | cut -d' ' -f1 | cut -d'-' -f1`
@@ -37,8 +40,8 @@ echo "Info: Model-predicted water level starts at $st_h:$st_mm UTC on $st_m/$st_
 en_y=`cat $fort_61   | tail -1 | cut -d' ' -f1 | cut -d'-' -f1`
 en_m=`cat $fort_61   | tail -1 | cut -d' ' -f1 | cut -d'-' -f2`
 en_d=`cat $fort_61   | tail -1 | cut -d' ' -f1 | cut -d'-' -f3 | cut -d',' -f1`
-en_h=`cat $fort_61   | tail -1 | cut -d' ' -f1 | cut -d'-' -f3 | cut -d',' -f2 | cut -d':' -f1`
-en_mm=`cat $fort_61  | tail -1 | cut -d' ' -f1 | cut -d'-' -f3 | cut -d',' -f2 | cut -d':' -f2`
+en_h=`cat $fort_61   | tail -1 | cut -d' ' -f2 | cut -d'-' -f3 | cut -d',' -f2 | cut -d':' -f1`
+en_mm=`cat $fort_61  | tail -1 | cut -d' ' -f2 | cut -d'-' -f3 | cut -d',' -f2 | cut -d':' -f2`
 echo "Info: Model-predicted water level ends at   $en_h:$en_mm UTC on $en_m/$en_d/$en_y"
 
 # Downloading some data to identify the time zone
@@ -77,7 +80,7 @@ echo "      $begin_date_plot $time_zone  TO  $end_date_plot $time_zone"
 
 # Downloading USGS data starting from 2 days before the start time of the current cycle
 url="https://waterdata.usgs.gov/nwis/uv?cb_00065=on&format=rdb&site_no=$site_no&period=&begin_date=$begin_date_download&end_date=$end_date_download" 
-wget $url -O raw-observed-$site > /dev/null 2>&1
+wget $url -O raw-observed-$site 
 
 # Trimming the observed starting from time 2 day ago
 # First, deleting the metadata from the head of the file
